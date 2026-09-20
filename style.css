@@ -1067,7 +1067,17 @@ button {
         padding-top: 130px;
     }
 
-    .hero-grid,
+      .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        justify-self: center;
+        margin: 0 auto;
+
+        width: min(90%, 390px);
+    }
+    
     .about-grid,
     .project-card,
     .contact-section .container {
@@ -1125,6 +1135,7 @@ button {
     .contact-content h2 {
         letter-spacing: -4px;
     }
+
 
 }
 
@@ -1204,6 +1215,14 @@ button {
 
         gap: 10px;
     }
+
+    .hero-card {
+    width: min(92%, 360px);
+    height: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
 
 }
 
