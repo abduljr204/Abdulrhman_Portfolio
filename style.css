@@ -1,0 +1,1125 @@
+/* ========================================
+   BASE
+======================================== */
+
+:root {
+    --bg: #f4f2eb;
+    --surface: #ffffff;
+    --text: #111111;
+    --muted: #686868;
+
+    --dark: #111111;
+    --dark-secondary: #1a1a1a;
+
+    --accent: #dfff00;
+
+    --border: rgba(17, 17, 17, 0.13);
+
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(90%, var(--max-width));
+    margin-inline: auto;
+}
+
+
+/* ========================================
+   NAV
+======================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(244, 242, 235, 0.8);
+    backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #8da000;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+.nav-contact {
+    padding: 10px 18px;
+
+    background: var(--dark);
+    color: white;
+
+    border-radius: 50px;
+}
+
+.nav-contact:hover {
+    opacity: 1 !important;
+
+    background: var(--accent);
+    color: black;
+}
+
+.menu-btn {
+    display: none;
+
+    border: 0;
+    background: transparent;
+
+    font-size: 1.7rem;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 100vh;
+
+    padding-top: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 100px;
+
+    font-size: 0.78rem;
+
+    margin-bottom: 35px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #4ecb71;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+
+    letter-spacing: 2.5px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(4rem, 8vw, 8rem);
+
+    letter-spacing: -7px;
+    line-height: 0.82;
+
+    margin-bottom: 40px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 2px var(--text);
+}
+
+.hero h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 580px;
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 22px;
+
+    border-radius: 100px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--dark);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+    color: black;
+
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    background: white;
+}
+
+
+/* HERO CARD */
+
+.hero-card {
+    min-height: 530px;
+
+    padding: 25px;
+
+    border-radius: 30px;
+
+    background: var(--dark);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform: rotate(2deg);
+
+    transition: 0.4s;
+}
+
+.hero-card:hover {
+    transform: rotate(0deg);
+}
+
+.card-top,
+.hero-card-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 0.75rem;
+}
+
+.card-number {
+    color: var(--accent);
+}
+
+.hero-card-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.initials {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 4.5rem;
+    font-weight: 700;
+
+    letter-spacing: -6px;
+}
+
+.hero-card-bottom {
+    gap: 30px;
+}
+
+.hero-card-bottom small {
+    color: #777;
+}
+
+.hero-card-bottom p {
+    margin-top: 3px;
+}
+
+.hero-line {
+    width: 100%;
+    height: 1px;
+
+    background: var(--border);
+
+    margin-top: 80px;
+}
+
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+.section {
+    padding: 130px 0;
+}
+
+.section-heading {
+    display: grid;
+
+    grid-template-columns: 0.35fr 1fr;
+
+    gap: 50px;
+
+    margin-bottom: 80px;
+}
+
+.section-number {
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    max-width: 850px;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+.section-heading h2 span {
+    color: #999;
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 100px;
+}
+
+.about-large p {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(2rem, 3vw, 3.5rem);
+
+    line-height: 1.2;
+
+    letter-spacing: -2px;
+}
+
+.about-text {
+    color: var(--muted);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+/* ========================================
+   EXPERIENCE
+======================================== */
+
+.section-dark {
+    background: var(--dark);
+
+    color: white;
+}
+
+.section-dark .section-heading h2 span {
+    color: #555;
+}
+
+.experience-item {
+    display: grid;
+
+    grid-template-columns: 0.35fr 1fr;
+
+    gap: 50px;
+
+    padding: 50px 0;
+
+    border-top: 1px solid #333;
+}
+
+.experience-item:last-child {
+    border-bottom: 1px solid #333;
+}
+
+.experience-date {
+    color: #777;
+
+    font-size: 0.8rem;
+}
+
+.experience-main h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(2rem, 4vw, 4rem);
+
+    letter-spacing: -3px;
+}
+
+.experience-role {
+    color: var(--accent);
+
+    margin-top: 5px;
+}
+
+.experience-description {
+    max-width: 650px;
+
+    color: #aaa;
+
+    margin-top: 20px;
+}
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.tags span {
+    border: 1px solid #444;
+
+    padding: 7px 12px;
+
+    border-radius: 100px;
+
+    color: #aaa;
+
+    font-size: 0.8rem;
+}
+
+
+/* ========================================
+   PROJECT
+======================================== */
+
+.project-card {
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    background: var(--surface);
+
+    border-radius: 35px;
+
+    overflow: hidden;
+}
+
+.project-visual {
+    min-height: 650px;
+
+    background: var(--accent);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.phone {
+    width: 285px;
+    min-height: 545px;
+
+    background: #f7f7f7;
+
+    border: 9px solid #111;
+
+    border-radius: 38px;
+
+    padding: 25px 18px;
+
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+
+    transform: rotate(-6deg);
+}
+
+.phone-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 20px;
+}
+
+.phone-header small {
+    color: #aaa;
+
+    font-size: 0.55rem;
+}
+
+.phone-header p {
+    font-weight: 700;
+}
+
+.fake-search {
+    background: #e9e9e9;
+
+    color: #999;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    margin: 25px 0;
+
+    font-size: 0.7rem;
+}
+
+.station-card {
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    margin-bottom: 12px;
+}
+
+.station-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.station-row strong {
+    display: block;
+
+    font-size: 0.75rem;
+}
+
+.station-row small {
+    color: #999;
+
+    font-size: 0.6rem;
+}
+
+.open {
+    color: green;
+
+    font-size: 0.55rem;
+    font-weight: 700;
+}
+
+.station-stats {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 15px;
+
+    font-size: 0.6rem;
+}
+
+.project-circle {
+    position: absolute;
+
+    right: 40px;
+    top: 45px;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: var(--dark);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.project-info {
+    padding: 65px;
+}
+
+.project-type {
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+}
+
+.project-info h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(2.4rem, 4vw, 4.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+}
+
+.project-info > p {
+    color: var(--muted);
+
+    margin-top: 25px;
+
+    max-width: 450px;
+}
+
+.project-features {
+    margin-top: 50px;
+
+    border-top: 1px solid var(--border);
+}
+
+.project-features div {
+    display: flex;
+
+    gap: 25px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.project-features span {
+    color: #999;
+
+    font-size: 0.8rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 35px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   SKILLS
+======================================== */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid var(--border);
+}
+
+.skill-card {
+    padding: 45px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.skill-card:nth-child(odd) {
+    border-right: 1px solid var(--border);
+}
+
+.skill-number {
+    color: #999;
+
+    font-size: 0.75rem;
+}
+
+.skill-card h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 2.8rem;
+
+    letter-spacing: -2px;
+
+    margin: 25px 0 15px;
+}
+
+.skill-card p {
+    color: var(--muted);
+
+    max-width: 400px;
+}
+
+
+/* ========================================
+   EDUCATION
+======================================== */
+
+.education-section {
+    background: #dedbd0;
+}
+
+.education-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.education-card {
+    min-height: 300px;
+
+    background: var(--bg);
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.education-year {
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.education-card h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 2.5rem;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact-section {
+    background: var(--accent);
+
+    padding: 130px 0;
+}
+
+.contact-section .container {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 80px;
+}
+
+.contact-content h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(4rem, 8vw, 8rem);
+
+    line-height: 0.9;
+
+    letter-spacing: -7px;
+
+    margin: 25px 0 40px;
+}
+
+.contact-content h2 span {
+    color: transparent;
+
+    -webkit-text-stroke: 2px black;
+}
+
+.contact-content > p {
+    max-width: 580px;
+}
+
+.contact-email {
+    display: inline-flex;
+
+    gap: 20px;
+
+    border-bottom: 2px solid black;
+
+    margin-top: 50px;
+
+    padding-bottom: 4px;
+
+    font-weight: 700;
+
+    font-size: 1.2rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+}
+
+.contact-links a {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    border-top: 1px solid rgba(0,0,0,0.3);
+
+    font-weight: 700;
+}
+
+.contact-links a:last-child {
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    background: var(--dark);
+    color: #888;
+
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 0.8rem;
+}
+
+
+/* ========================================
+   SCROLL ANIMATION
+======================================== */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 30px;
+
+        background: var(--bg);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        display: none;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    .hero {
+        padding-top: 130px;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .project-card,
+    .contact-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .hero-card {
+        min-height: 420px;
+    }
+
+    .section-heading {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .section-heading h2 {
+        letter-spacing: -3px;
+    }
+
+    .about-grid {
+        gap: 40px;
+    }
+
+    .experience-item {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .project-visual {
+        min-height: 600px;
+    }
+
+    .project-info {
+        padding: 40px 25px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card:nth-child(odd) {
+        border-right: 0;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content h2 {
+        letter-spacing: -4px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 90px 0;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        justify-content: center;
+    }
+
+    .hero-card {
+        min-height: 380px;
+    }
+
+    .initials {
+        width: 140px;
+        height: 140px;
+
+        font-size: 3.5rem;
+    }
+
+    .project-visual {
+        min-height: 500px;
+    }
+
+    .phone {
+        width: 240px;
+
+        transform: rotate(-3deg);
+    }
+
+    .project-circle {
+        width: 80px;
+        height: 80px;
+
+        right: 15px;
+        top: 20px;
+    }
+
+    .skill-card {
+        padding: 35px 10px;
+    }
+
+    .education-card {
+        min-height: 250px;
+    }
+
+    .contact-content h2 {
+        font-size: 4rem;
+    }
+
+    .contact-email {
+        font-size: 0.9rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
