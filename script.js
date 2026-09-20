@@ -66,3 +66,38 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
+// NAME TYPEWRITER EFFECT
+
+const firstNameElement = document.getElementById("firstName");
+const lastNameElement = document.getElementById("lastName");
+
+const firstNameText = "Abdulrhman";
+const lastNameText = "BenHassan.";
+
+let firstIndex = 0;
+let lastIndex = 0;
+
+function typeFirstName() {
+    if (firstIndex < firstNameText.length) {
+        firstNameElement.textContent += firstNameText.charAt(firstIndex);
+        firstIndex++;
+
+        setTimeout(typeFirstName, 90);
+    } else {
+        setTimeout(typeLastName, 250);
+    }
+}
+
+function typeLastName() {
+    if (lastIndex < lastNameText.length) {
+        lastNameElement.textContent += lastNameText.charAt(lastIndex);
+        lastIndex++;
+
+        setTimeout(typeLastName, 90);
+    }
+}
+
+window.addEventListener("load", () => {
+    setTimeout(typeFirstName, 400);
+});

@@ -209,7 +209,15 @@ button {
     margin-bottom: 40px;
 }
 
-.hero h1 span {
+#firstName {
+    display: block;
+
+    color: var(--text);
+
+    -webkit-text-stroke: 0;
+}
+
+#lastName {
     display: block;
 
     color: transparent;
@@ -1197,4 +1205,42 @@ button {
         gap: 10px;
     }
 
+}
+
+.typing-name {
+    position: relative;
+}
+
+/* BenHassan stays on second line */
+#lastName {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 2px var(--text);
+}
+
+/* Blinking typing cursor */
+.typing-cursor {
+    display: inline-block;
+
+    color: var(--accent);
+
+    font-weight: 300;
+
+    margin-left: 6px;
+
+    animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
 }
