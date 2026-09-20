@@ -321,26 +321,29 @@ button {
     justify-content: center;
 }
 
-.initials {
-    width: 180px;
-    height: 180px;
+.profile-image-wrap {
+    width: 220px;
+    height: 220px;
 
-    border-radius: 50%;
+    border-radius: 28px;
 
-    background: var(--accent);
+    overflow: hidden;
 
-    color: black;
+    border: 3px solid rgba(255, 255, 255, 0.08);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
 
-    font-family: "Space Grotesk", sans-serif;
+.profile-image {
+    width: 100%;
+    height: 100%;
 
-    font-size: 4.5rem;
-    font-weight: 700;
+    object-fit: cover;
+    object-position: center;
 
-    letter-spacing: -6px;
+    display: block;
+
+    filter: grayscale(100%);
 }
 
 .hero-card-bottom {
@@ -1075,13 +1078,20 @@ button {
         min-height: 380px;
     }
 
-    .initials {
-        width: 140px;
-        height: 140px;
+.profile-image-wrap {
+    width: 220px;
+    height: 220px;
 
-        font-size: 3.5rem;
-    }
+    border-radius: 28px;
 
+    overflow: hidden;
+
+    background: #222;
+
+    border: 3px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
     .project-visual {
         min-height: 500px;
     }
