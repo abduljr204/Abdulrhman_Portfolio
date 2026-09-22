@@ -90,14 +90,25 @@ function typeFirstName() {
 }
 
 function typeLastName() {
+
     if (lastIndex < lastNameText.length) {
-        lastNameElement.textContent += lastNameText.charAt(lastIndex);
+
+        lastNameElement.textContent +=
+            lastNameText.charAt(lastIndex);
+
         lastIndex++;
 
         setTimeout(typeLastName, 90);
-    }
-}
 
-window.addEventListener("load", () => {
-    setTimeout(typeFirstName, 400);
-});
+    } else {
+
+        setTimeout(() => {
+
+            document.querySelector(".typing-cursor")
+                .style.display = "none";
+
+        }, 1200);
+
+    }
+
+}

@@ -275,7 +275,6 @@ img {
     position: relative;
 }
 
-
 #firstName {
     display: block;
 
@@ -284,31 +283,33 @@ img {
     -webkit-text-stroke: 0;
 }
 
+.last-name-line {
+    display: block;
+
+    white-space: nowrap;
+}
 
 #lastName {
-    display: block;
+    display: inline;
 
     color: transparent;
 
     -webkit-text-stroke: 2px var(--text);
 }
 
-
-
-/* TYPING CURSOR */
-
 .typing-cursor {
     display: inline-block;
 
     color: var(--accent);
 
+    -webkit-text-stroke: 0;
+
     font-weight: 300;
 
-    margin-left: 6px;
+    margin-left: 5px;
 
     animation: blinkCursor 0.8s infinite;
 }
-
 
 @keyframes blinkCursor {
 
@@ -321,7 +322,6 @@ img {
     100% {
         opacity: 0;
     }
-
 }
 
 
@@ -538,7 +538,6 @@ img {
     position: absolute;
 
     bottom: 0;
-
     left: 0;
 
     width: 100%;
@@ -554,10 +553,6 @@ img {
     gap: 20px;
 
     color: white;
-
-    border-top:
-        1px solid
-        rgba(223, 255, 0, 0.35);
 }
 
 
