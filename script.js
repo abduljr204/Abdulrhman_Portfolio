@@ -112,3 +112,78 @@ function typeLastName() {
     }
 
 }
+
+/* ========================================
+   NAME TYPEWRITER
+======================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const firstNameElement =
+        document.getElementById("firstName");
+
+    const lastNameElement =
+        document.getElementById("lastName");
+
+    const cursor =
+        document.querySelector(".typing-cursor");
+
+
+    const firstName = "Abdulrhman";
+    const lastName = "BenHassan.";
+
+    let firstIndex = 0;
+    let lastIndex = 0;
+
+
+    function typeFirstName() {
+
+        if (firstIndex < firstName.length) {
+
+            firstNameElement.textContent +=
+                firstName[firstIndex];
+
+            firstIndex++;
+
+            setTimeout(typeFirstName, 90);
+
+        } else {
+
+            setTimeout(typeLastName, 250);
+
+        }
+
+    }
+
+
+    function typeLastName() {
+
+        if (lastIndex < lastName.length) {
+
+            lastNameElement.textContent +=
+                lastName[lastIndex];
+
+            lastIndex++;
+
+            setTimeout(typeLastName, 90);
+
+        } else {
+
+            /* Hide cursor after typing finishes */
+
+            setTimeout(() => {
+
+                cursor.style.opacity = "0";
+
+            }, 1500);
+
+        }
+
+    }
+
+
+    /* Start shortly after page loads */
+
+    setTimeout(typeFirstName, 500);
+
+});
