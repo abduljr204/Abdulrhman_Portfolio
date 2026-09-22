@@ -1264,50 +1264,143 @@ button {
     }
 }
 
-/* ========================================
-   DASHBOARDS
+    /* ========================================
+   DASHBOARD SECTION
 ======================================== */
 
 .dashboard-section {
-    background: #111;
+    background: #0d0d0d;
     color: white;
 }
 
 .dashboard-section .section-heading h2 span {
-    color: #5c5c5c;
+    color: #5e5e5e;
 }
+
+.dashboard-section .section-number {
+    color: var(--accent);
+}
+
+
+/* DASHBOARD CARD */
 
 .dashboard-card {
+    position: relative;
+
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 0;
+    grid-template-columns: minmax(0, 1.45fr) minmax(340px, 0.75fr);
 
     background: #171717;
+
     border: 1px solid #2a2a2a;
     border-radius: 30px;
-    overflow: hidden;
 
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+    overflow: visible;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
+.dashboard-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.34);
+}
+
+
+/* DASHBOARD IMAGE AREA */
+
 .dashboard-preview {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 22px;
+
     background: #0f0f0f;
-    padding: 28px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border-radius: 30px 0 0 30px;
+
+    overflow: visible;
 }
+
+
+/* GREEN GLOW */
+
+.dashboard-preview::before {
+    content: "";
+
+    position: absolute;
+
+    width: 75%;
+    height: 75%;
+
+    background: var(--accent);
+
+    filter: blur(80px);
+
+    opacity: 0;
+
+    transition: opacity 0.45s ease;
+
+    z-index: 0;
+}
+
+
+/* DASHBOARD IMAGE */
 
 .dashboard-preview img {
     width: 100%;
     height: auto;
 
-    border-radius: 18px;
     display: block;
 
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
+
+    object-fit: contain;
+
+    image-rendering: auto;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+
+    cursor: zoom-in;
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
 }
+
+
+/* POP OUT IMAGE */
+
+.dashboard-preview:hover img {
+    transform:
+        translateY(-12px)
+        scale(1.04);
+
+    box-shadow:
+        0 35px 80px rgba(0, 0, 0, 0.55);
+
+    filter:
+        brightness(1.04)
+        contrast(1.03);
+}
+
+.dashboard-preview:hover::before {
+    opacity: 0.12;
+}
+
+
+/* DASHBOARD TEXT AREA */
 
 .dashboard-details {
     padding: 55px 45px;
@@ -1315,57 +1408,166 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    background: #171717;
+
+    border-radius: 0 30px 30px 0;
 }
 
+
+/* SMALL GREEN LABEL */
+
 .dashboard-label {
+    margin-bottom: 20px;
+
     color: var(--accent);
 
     font-size: 0.72rem;
     font-weight: 700;
+
     letter-spacing: 2px;
 
-    margin-bottom: 22px;
+    text-transform: uppercase;
 }
+
+
+/* DASHBOARD TITLE */
 
 .dashboard-details h3 {
+    margin-bottom: 22px;
+
+    color: white;
+
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: clamp(2.3rem, 4vw, 4rem);
-    line-height: 1;
+    font-size: clamp(2rem, 3.5vw, 3.7rem);
+
+    line-height: 1.02;
+
     letter-spacing: -3px;
-
-    margin-bottom: 22px;
 }
 
-.dashboard-details p {
-    color: #b8b8b8;
-    margin-bottom: 16px;
 
-    max-width: 460px;
+/* DASHBOARD DESCRIPTION */
+
+.dashboard-details > p:not(.dashboard-label) {
+    max-width: 500px;
+
+    margin-bottom: 15px;
+
+    color: #b7b7b7;
+
+    font-size: 0.95rem;
+
+    line-height: 1.75;
 }
+
+
+/* DASHBOARD TAGS */
 
 .dashboard-details .tags {
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 22px;
 }
 
 .dashboard-details .tags span {
+    padding: 7px 12px;
+
     border: 1px solid #3b3b3b;
-    color: #d0d0d0;
+
+    border-radius: 100px;
+
+    background: #1e1e1e;
+
+    color: #d5d5d5;
+
+    font-size: 0.78rem;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.dashboard-details .tags span:hover {
+    background: var(--accent);
+    color: #111;
+
+    border-color: var(--accent);
 }
 
 
-/* RESPONSIVE */
+/* ========================================
+   DASHBOARD TABLET / MOBILE
+======================================== */
 
 @media (max-width: 900px) {
+
     .dashboard-card {
         grid-template-columns: 1fr;
-    }
 
-    .dashboard-details {
-        padding: 35px 25px;
+        border-radius: 26px;
     }
 
     .dashboard-preview {
         padding: 18px;
+
+        border-radius: 26px 26px 0 0;
     }
+
+    .dashboard-details {
+        padding: 35px 25px;
+
+        border-radius: 0 0 26px 26px;
+    }
+
+    .dashboard-details h3 {
+        font-size: clamp(2rem, 7vw, 3rem);
+
+        letter-spacing: -2px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-preview {
+        padding: 12px;
+    }
+
+    .dashboard-preview img {
+        border-radius: 12px;
+    }
+
+    .dashboard-details {
+        padding: 30px 22px;
+    }
+
+    .dashboard-details h3 {
+        font-size: 2.15rem;
+    }
+
+}
+
+/* ========================================
+   SCROLL REVEAL
+======================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
