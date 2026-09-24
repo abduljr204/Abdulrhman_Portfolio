@@ -3,20 +3,24 @@
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+}
 
 
 // CLOSE MOBILE MENU AFTER CLICKING A LINK
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+if (navLinks) {
+    document.querySelectorAll(".nav-links a").forEach(link => {
 
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+
     });
-
-});
+}
 
 
 // SCROLL REVEAL ANIMATION
@@ -52,20 +56,22 @@ revealElements.forEach(element => {
 
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll", () => {
+if (header) {
+    window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 30) {
+        if (window.scrollY > 30) {
 
-        header.style.boxShadow =
-            "0 10px 40px rgba(0,0,0,0.05)";
+            header.style.boxShadow =
+                "0 10px 40px rgba(0,0,0,0.05)";
 
-    } else {
+        } else {
 
-        header.style.boxShadow = "none";
+            header.style.boxShadow = "none";
 
-    }
+        }
 
-});
+    });
+}
 
 // NAME TYPEWRITER EFFECT
 
@@ -127,6 +133,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cursor =
         document.querySelector(".typing-cursor");
+
+    if (!firstNameElement || !lastNameElement || !cursor) {
+        return;
+    }
 
 
     const firstName = "Abdulrhman";
