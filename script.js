@@ -187,3 +187,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeFirstName, 500);
 
 });
+
+

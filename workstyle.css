@@ -1,0 +1,922 @@
+/* ========================================
+   WORK PAGE
+======================================== */
+
+.work-page {
+    background: #0d0d0d;
+
+    color: white;
+}
+
+
+
+/* ========================================
+   WORK NAVIGATION
+======================================== */
+
+.work-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    padding: 22px 0;
+
+    background:
+        rgba(13, 13, 13, 0.88);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    border-bottom:
+        1px solid #292929;
+}
+
+
+.work-nav {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.work-page .logo {
+    color: white;
+}
+
+
+.work-page .logo span {
+    color: var(--accent);
+}
+
+
+.back-home {
+    color: #aaa;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.back-home:hover {
+    color: var(--accent);
+}
+
+
+
+/* ========================================
+   WORK HERO
+======================================== */
+
+.work-hero {
+    padding:
+        130px 0
+        100px;
+}
+
+
+.work-eyebrow {
+    margin-bottom: 30px;
+
+    color: var(--accent);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.work-hero h1 {
+    max-width: 1050px;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        clamp(
+            3.7rem,
+            7vw,
+            7rem
+        );
+
+    line-height: 0.92;
+
+    letter-spacing: -6px;
+}
+
+
+.work-hero h1 span {
+    display: block;
+
+    color: #606060;
+}
+
+
+.work-intro {
+    max-width: 650px;
+
+    margin-top: 40px;
+
+    color: #aaa;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+
+/* ========================================
+   PROJECT SECTION
+======================================== */
+
+.work-projects {
+    padding-bottom: 140px;
+}
+
+
+.work-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 32px;
+}
+
+
+
+/* ========================================
+   PROJECT CARD
+======================================== */
+
+.work-card {
+    background: #171717;
+
+    border:
+        1px solid #292929;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.work-card:hover {
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(223, 255, 0, 0.35);
+
+    box-shadow:
+        0 40px 90px
+        rgba(0, 0, 0, 0.42);
+}
+
+
+
+/* ========================================
+   PROJECT IMAGE
+======================================== */
+
+.work-card-image {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 24px;
+
+    background: #101010;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.work-project-image {
+    width: 100%;
+
+    height: auto;
+
+    max-height: 345px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 22px 50px
+        rgba(0, 0, 0, 0.45);
+
+    transform-origin: center;
+
+    transition:
+        transform
+        0.5s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+        filter 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.work-card:hover
+.work-project-image {
+
+    transform:
+        scale(1.04);
+
+    filter:
+        brightness(1.04)
+        contrast(1.03);
+
+    box-shadow:
+        0 32px 70px
+        rgba(0, 0, 0, 0.55);
+}
+
+
+
+/* ========================================
+   PROJECT NUMBER
+======================================== */
+
+.work-number {
+    position: absolute;
+
+    top: 22px;
+
+    left: 22px;
+
+    z-index: 10;
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        var(--accent);
+
+    color: #111;
+
+    border-radius: 50%;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.2);
+}
+
+
+.dark-number {
+    background: #111;
+
+    color:
+        var(--accent);
+}
+
+
+
+/* ========================================
+   PROJECT CONTENT
+======================================== */
+
+.work-card-content {
+    min-height: 405px;
+
+    padding: 38px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.work-category {
+    margin-bottom: 18px;
+
+    color:
+        var(--accent);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.work-card-content h2 {
+    margin-bottom: 20px;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        clamp(
+            2.1rem,
+            3vw,
+            3.2rem
+        );
+
+    line-height: 1;
+
+    letter-spacing: -2.5px;
+}
+
+
+.work-description {
+    color: #aaa;
+
+    line-height: 1.75;
+}
+
+
+
+/* ========================================
+   PROJECT TAGS
+======================================== */
+
+.work-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+
+.work-tags span {
+    padding:
+        6px 11px;
+
+    border:
+        1px solid #3d3d3d;
+
+    border-radius: 100px;
+
+    color: #ccc;
+
+    background: #1d1d1d;
+
+    font-size: 0.72rem;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.work-tags span:hover {
+    background:
+        var(--accent);
+
+    color: #111;
+
+    border-color:
+        var(--accent);
+}
+
+
+
+/* ========================================
+   CARD FOOTER
+======================================== */
+
+.work-card-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: auto;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid #303030;
+
+    color: #777;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+}
+
+
+
+/* ========================================
+   LIBYA FUEL CARD
+======================================== */
+
+.fuel-work-image {
+    background:
+        var(--accent);
+}
+
+
+
+/* PHONE MOCKUP */
+
+.work-phone {
+    width: 245px;
+
+    min-height: 465px;
+
+    padding:
+        24px 17px;
+
+    background:
+        #f7f7f7;
+
+    color: #111;
+
+    border:
+        8px solid #111;
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 30px 60px
+        rgba(0, 0, 0, 0.25);
+
+    transform:
+        rotate(-5deg)
+        scale(0.82);
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+
+.work-card:hover
+.work-phone {
+
+    transform:
+        rotate(0deg)
+        scale(0.86)
+        translateY(-5px);
+
+    box-shadow:
+        0 40px 80px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* PHONE HEADER */
+
+.work-phone-header {
+    margin-top: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.work-phone-header small {
+    color: #aaa;
+
+    font-size: 0.5rem;
+}
+
+
+.work-phone-header p {
+    font-weight: 700;
+
+    font-size: 0.9rem;
+}
+
+
+
+/* PHONE SEARCH */
+
+.work-search {
+    margin:
+        22px 0;
+
+    padding: 11px;
+
+    background: #e9e9e9;
+
+    color: #999;
+
+    border-radius: 9px;
+
+    font-size: 0.65rem;
+}
+
+
+
+/* STATION CARD */
+
+.work-station-card {
+    margin-bottom: 11px;
+
+    padding: 14px;
+
+    background: white;
+
+    border-radius: 14px;
+}
+
+
+.work-station-row {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    gap: 8px;
+}
+
+
+.work-station-row strong {
+    display: block;
+
+    font-size: 0.7rem;
+}
+
+
+.work-station-row small {
+    color: #999;
+
+    font-size: 0.55rem;
+}
+
+
+.work-open {
+    color: green;
+
+    font-size: 0.5rem;
+
+    font-weight: 700;
+}
+
+
+.work-station-info {
+    margin-top: 13px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    font-size: 0.55rem;
+}
+
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.work-cta {
+    padding:
+        120px 0;
+
+    background:
+        var(--accent);
+
+    color: #111;
+}
+
+
+.work-cta > .container > p {
+    margin-bottom: 25px;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.work-cta h2 {
+    max-width: 850px;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        clamp(
+            3.5rem,
+            7vw,
+            7rem
+        );
+
+    line-height: 0.9;
+
+    letter-spacing: -6px;
+}
+
+
+.work-cta h2 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        2px #111;
+}
+
+
+.work-contact-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 50px;
+
+    padding:
+        14px 22px;
+
+    background: #111;
+
+    color: white;
+
+    border-radius: 100px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.work-contact-button:hover {
+    transform:
+        translateY(-3px);
+
+    background: white;
+
+    color: #111;
+}
+
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.work-footer {
+    padding: 35px 0;
+
+    background: #0d0d0d;
+
+    border-top:
+        1px solid #292929;
+}
+
+
+.work-footer .container {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    gap: 20px;
+
+    color: #777;
+
+    font-size: 0.8rem;
+}
+
+
+.work-footer a {
+    transition:
+        color 0.3s ease;
+}
+
+
+.work-footer a:hover {
+    color:
+        var(--accent);
+}
+
+
+
+/* ========================================
+   WORK PAGE TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .work-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .work-card-image {
+        min-height: 470px;
+    }
+
+
+    .work-project-image {
+        max-height: 420px;
+    }
+
+
+    .work-card-content {
+        min-height: 360px;
+    }
+
+}
+
+
+
+/* ========================================
+   WORK PAGE MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .work-header {
+        padding:
+            18px 0;
+    }
+
+
+    .back-home {
+        font-size:
+            0.72rem;
+    }
+
+
+    .work-hero {
+        padding:
+            100px 0
+            70px;
+    }
+
+
+    .work-hero h1 {
+        letter-spacing:
+            -3px;
+    }
+
+
+    .work-intro {
+        font-size:
+            0.95rem;
+    }
+
+
+    .work-projects {
+        padding-bottom:
+            90px;
+    }
+
+
+    .work-card {
+        border-radius:
+            24px;
+    }
+
+
+    .work-card-image {
+        min-height:
+            300px;
+
+        padding:
+            15px;
+    }
+
+
+    .work-project-image {
+        max-height:
+            270px;
+
+        border-radius:
+            10px;
+    }
+
+
+    .work-number {
+        width:
+            42px;
+
+        height:
+            42px;
+
+        top:
+            15px;
+
+        left:
+            15px;
+    }
+
+
+    .work-card-content {
+        min-height:
+            360px;
+
+        padding:
+            28px 22px;
+    }
+
+
+    .work-card-content h2 {
+        font-size:
+            2.25rem;
+    }
+
+
+    .work-phone {
+        transform:
+            rotate(-3deg)
+            scale(0.62);
+    }
+
+
+    .work-card:hover
+    .work-phone {
+
+        transform:
+            rotate(0deg)
+            scale(0.66);
+    }
+
+
+    .work-cta {
+        padding:
+            90px 0;
+    }
+
+
+    .work-cta h2 {
+        font-size:
+            4rem;
+
+        letter-spacing:
+            -4px;
+    }
+
+
+    .work-footer .container {
+        flex-direction:
+            column;
+    }
+
+}
