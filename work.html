@@ -12,34 +12,21 @@
 
     <meta
         name="description"
-        content="Selected projects by Abdulrhman BenHassan - Data Analytics, Power BI, UI/UX and Digital Product Design."
+        content="Selected work by Abdulrhman BenHassan, Data Analyst: Power BI dashboard case study and a UX concept in development."
     >
 
-    <title>
-        Selected Work | Abdulrhman BenHassan
-    </title>
+    <title>Selected Work | Abdulrhman BenHassan, Data Analyst</title>
 
+    <script>document.documentElement.classList.add("js");</script>
 
-    <!-- Main CSS -->
-
-    <link
-        rel="stylesheet"
-        href="workstyle.css"
-    >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="workstyle.css">
 
 
     <!-- Fonts -->
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
@@ -51,6 +38,8 @@
 
 <body class="work-page">
 
+    <a href="#main" class="skip-link">Skip to content</a>
+
 
     <!-- ========================================
          NAVIGATION
@@ -58,30 +47,41 @@
 
     <header class="work-header">
 
-        <div class="container work-nav">
+        <nav class="container work-nav" aria-label="Main">
 
-            <a
-                href="index.html"
-                class="logo"
-            >
+            <a href="index.html" class="logo" aria-label="Abdulrhman BenHassan, home">
                 AB<span>.</span>
             </a>
 
+            <div class="work-nav-links">
 
-            <a
-                href="index.html"
-                class="back-home"
-            >
-                ← Back to Portfolio
-            </a>
+                <a href="index.html" class="back-home">
+                    ← Portfolio
+                </a>
 
-        </div>
+                <a
+                    href="assets/Abdulrhman_BenHassan_Resume.pdf"
+                    class="back-home"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Résumé (PDF)
+                    <span class="sr-only">opens in a new tab</span>
+                </a>
+
+                <a href="index.html#contact" class="back-home">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
 
     </header>
 
 
 
-    <main>
+    <main id="main">
 
 
         <!-- ========================================
@@ -93,23 +93,19 @@
             <div class="container">
 
                 <p class="work-eyebrow">
-                    SELECTED WORK / 2026
+                    SELECTED WORK
                 </p>
 
 
                 <h1>
-                    Projects that combine
-
-                    <span>
-                        data, design & technology.
-                    </span>
+                    Data analysis first,
+                    <span>with design to support it.</span>
                 </h1>
 
 
                 <p class="work-intro">
-                    A selection of projects demonstrating my work
-                    across data analytics, Power BI, UI/UX design,
-                    visualization and digital product development.
+                    A Power BI case study that shows how I approach data analysis
+                    and reporting, plus a UX concept I'm currently developing.
                 </p>
 
             </div>
@@ -122,17 +118,14 @@
              PROJECTS
         ======================================== -->
 
-        <section class="work-projects">
+        <section class="work-projects" aria-label="Projects">
 
             <div class="container">
 
                 <div class="work-grid">
 
 
-                    <!-- ========================================
-                         PROJECT 01
-                         POWER BI
-                    ======================================== -->
+                    <!-- PROJECT 01 - POWER BI -->
 
                     <article class="work-card reveal">
 
@@ -140,12 +133,13 @@
 
                             <img
                                 src="assets/images/oil-price-dashboard.png"
-                                alt="Global Oil Price Analysis Dashboard"
+                                alt="Global Oil Price Analysis Dashboard in Power BI, showing KPI cards, a line chart, a daily price table and an Es Sider area chart"
                                 class="work-project-image dashboard-work-image"
+                                width="2767"
+                                height="1600"
                             >
 
-
-                            <span class="work-number">
+                            <span class="work-number" aria-hidden="true">
                                 01
                             </span>
 
@@ -155,58 +149,41 @@
                         <div class="work-card-content">
 
                             <p class="work-category">
-                                POWER BI / DATA ANALYTICS
+                                CASE STUDY · POWER BI · DATA ANALYSIS
                             </p>
 
 
                             <h2>
-                                Global Oil Price
-                                Analysis Dashboard
+                                <a href="oil-price-dashboard.html" class="work-card-link">
+                                    Global Oil Price
+                                    Analysis Dashboard
+                                </a>
                             </h2>
 
 
                             <p class="work-description">
-                                A Power BI dashboard created to
-                                transform complex market data into
-                                clear KPIs, trends, comparisons
-                                and visual insights.
+                                A Power BI dashboard comparing WTI, Brent,
+                                OPEC Basket and Es Sider crude prices with KPI
+                                cards, daily trends, a price table and a period
+                                comparison.
                             </p>
 
 
                             <div class="work-tags">
 
-                                <span>
-                                    Power BI
-                                </span>
-
-                                <span>
-                                    Excel
-                                </span>
-
-                                <span>
-                                    Data Visualization
-                                </span>
-
-                                <span>
-                                    KPI Design
-                                </span>
-
-                                <span>
-                                    Trend Analysis
-                                </span>
+                                <span>Power BI</span>
+                                <span>KPI Design</span>
+                                <span>Trend Analysis</span>
+                                <span>Data Visualization</span>
 
                             </div>
 
 
                             <div class="work-card-bottom">
 
-                                <span>
-                                    Data Analysis
-                                </span>
+                                <span>Read the case study →</span>
 
-                                <span>
-                                    2026
-                                </span>
+                                <span>Data Analysis</span>
 
                             </div>
 
@@ -216,43 +193,22 @@
 
 
 
-                    <!-- ========================================
-                         PROJECT 02
-                         LIBYA FUEL
-                    ======================================== -->
+                    <!-- PROJECT 02 - LIBYA FUEL -->
 
                     <article class="work-card reveal">
 
                         <div class="work-card-image fuel-work-image">
 
-
-                            <!-- If you have a Libya Fuel screenshot,
-                                 use the image below.
-
-                                 Otherwise you can temporarily remove
-                                 this img and keep the phone mockup.
-                            -->
-
-                            <div class="work-phone">
+                            <div class="work-phone" aria-hidden="true">
 
                                 <div class="work-phone-header">
 
                                     <div>
-
-                                        <small>
-                                            GOOD MORNING
-                                        </small>
-
-                                        <p>
-                                            Find Fuel
-                                        </p>
-
+                                        <small>GOOD MORNING</small>
+                                        <p>Find Fuel</p>
                                     </div>
 
-
-                                    <span>
-                                        ●
-                                    </span>
+                                    <span>●</span>
 
                                 </div>
 
@@ -267,35 +223,17 @@
                                     <div class="work-station-row">
 
                                         <div>
-
-                                            <strong>
-                                                Al-Andalus Station
-                                            </strong>
-
-                                            <small>
-                                                1.2 km away
-                                            </small>
-
+                                            <strong>Station A</strong>
+                                            <small>1.2 km away</small>
                                         </div>
 
-
-                                        <span class="work-open">
-                                            OPEN
-                                        </span>
+                                        <span class="work-open">OPEN</span>
 
                                     </div>
 
-
                                     <div class="work-station-info">
-
-                                        <span>
-                                            ⛽ Fuel Available
-                                        </span>
-
-                                        <span>
-                                            🚗 Medium Queue
-                                        </span>
-
+                                        <span>⛽ Fuel available</span>
+                                        <span>🚗 Medium queue</span>
                                     </div>
 
                                 </div>
@@ -306,35 +244,17 @@
                                     <div class="work-station-row">
 
                                         <div>
-
-                                            <strong>
-                                                Tripoli Central
-                                            </strong>
-
-                                            <small>
-                                                2.8 km away
-                                            </small>
-
+                                            <strong>Station B</strong>
+                                            <small>2.8 km away</small>
                                         </div>
 
-
-                                        <span class="work-open">
-                                            OPEN
-                                        </span>
+                                        <span class="work-open">OPEN</span>
 
                                     </div>
 
-
                                     <div class="work-station-info">
-
-                                        <span>
-                                            ⛽ Fuel Available
-                                        </span>
-
-                                        <span>
-                                            🚗 Low Queue
-                                        </span>
-
+                                        <span>⛽ Fuel available</span>
+                                        <span>🚗 Low queue</span>
                                     </div>
 
                                 </div>
@@ -342,8 +262,12 @@
                             </div>
 
 
-                            <span class="work-number dark-number">
+                            <span class="work-number dark-number" aria-hidden="true">
                                 02
+                            </span>
+
+                            <span class="work-mockup-caption">
+                                Illustrative mockup · sample data
                             </span>
 
                         </div>
@@ -352,7 +276,7 @@
                         <div class="work-card-content">
 
                             <p class="work-category">
-                                UI/UX / PRODUCT DESIGN
+                                UX CONCEPT · IN DEVELOPMENT
                             </p>
 
 
@@ -362,44 +286,31 @@
 
 
                             <p class="work-description">
-                                A digital platform concept designed
-                                to help drivers in Libya find nearby
-                                fuel stations, check availability,
-                                understand queue levels and view
-                                useful station information.
+                                A concept for a mobile service that would help
+                                drivers in Libya find nearby fuel stations and
+                                check availability and queue levels. This is an
+                                early-stage concept, not a launched product.
+                            </p>
+
+                            <p class="work-description">
+                                <mark class="draft">DRAFT: completed research, wireframes, prototypes or tests (only what's done)</mark>
                             </p>
 
 
                             <div class="work-tags">
 
-                                <span>
-                                    UI/UX
-                                </span>
-
-                                <span>
-                                    Figma
-                                </span>
-
-                                <span>
-                                    Product Design
-                                </span>
-
-                                <span>
-                                    Front-End
-                                </span>
+                                <span>UX Research</span>
+                                <span>Figma</span>
+                                <span>Product Design</span>
 
                             </div>
 
 
                             <div class="work-card-bottom">
 
-                                <span>
-                                    Digital Product
-                                </span>
+                                <span>Concept</span>
 
-                                <span>
-                                    In Development
-                                </span>
+                                <span>In development</span>
 
                             </div>
 
@@ -416,89 +327,110 @@
 
 
 
-                <!-- ========================================
-                    CONTACT CTA
-                ======================================== -->
+        <!-- ========================================
+             CONTACT CTA
+        ======================================== -->
 
-                <section class="work-cta">
+        <section class="work-cta" aria-labelledby="cta-title">
 
-                    <div class="container work-cta-content">
+            <div class="container work-cta-content">
 
-                        <div>
+                <div>
 
-                            <p class="work-cta-label">
-                                HAVE A PROJECT IN MIND?
-                            </p>
+                    <p class="work-cta-label">
+                        OPEN TO DATA ANALYST &amp; BI ROLES IN CANADA
+                    </p>
 
-                            <h2>
-                                Let's create
-                                <span>something useful.</span>
-                            </h2>
+                    <h2 id="cta-title">
+                        Let's talk
+                        <span>about your data.</span>
+                    </h2>
 
-                            <p class="work-cta-text">
-                                I'm available for data analysis, Power BI dashboards,
-                                UI/UX design and digital product projects.
-                            </p>
+                    <p class="work-cta-text">
+                        I'm a Canadian citizen and don't need sponsorship.
+                        I'm looking for Data Analyst and Business Intelligence
+                        roles that use SQL, Power BI and Excel.
+                        <mark class="draft">DRAFT: Canadian city · relocation · work arrangement</mark>
+                    </p>
 
-                        </div>
-
-
-                        <div class="work-cta-action">
-
-                            <a
-                                href="mailto:benhassanabdulrhman@gmail.com"
-                                class="work-contact-button"
-                            >
-                                Contact Me
-                                <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </section>
+                </div>
 
 
-                <!-- ========================================
-                    FOOTER
-                ======================================== -->
+                <div class="work-cta-action">
 
-                <footer class="work-footer">
+                    <a
+                        href="mailto:benhassanabdulrhman@gmail.com"
+                        class="work-contact-button"
+                    >
+                        Email me
+                        <span aria-hidden="true">↗</span>
+                    </a>
 
-                    <div class="container work-footer-content">
+                    <a
+                        href="https://www.linkedin.com/in/abdulrhman-benhassn-a7552919a/"
+                        class="work-contact-button work-contact-secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                        <span aria-hidden="true">↗</span>
+                        <span class="sr-only">opens in a new tab</span>
+                    </a>
 
-                        <div>
+                </div>
 
-                            <a
-                                href="index.html"
-                                class="footer-logo"
-                            >
-                                AB<span>.</span>
-                            </a>
+            </div>
 
-                            <p>
-                                Data • Design • Development
-                            </p>
+        </section>
 
-                        </div>
+    </main>
 
 
-                        <div class="work-footer-right">
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
 
-                            <a href="index.html">
-                                Back to Portfolio ↑
-                            </a>
+    <footer class="work-footer">
 
-                            <p>
-                                © 2026 Abdulrhman BenHassan
-                            </p>
+        <div class="container work-footer-content">
 
-                        </div>
+            <div>
 
-                    </div>
+                <a href="index.html" class="footer-logo" aria-label="Abdulrhman BenHassan, home">
+                    AB<span>.</span>
+                </a>
 
-                </footer>
+                <p>
+                    Data Analyst | SQL, Power BI &amp; Excel
+                </p>
+
+            </div>
+
+
+            <div class="work-footer-right">
+
+                <a
+                    href="https://github.com/abduljr204"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub ↗
+                    <span class="sr-only">opens in a new tab</span>
+                </a>
+
+                <a href="index.html">
+                    Back to portfolio ↑
+                </a>
+
+                <p>
+                    © 2026 Abdulrhman BenHassan
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
 
     <script src="script.js"></script>
 

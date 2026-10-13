@@ -6,10 +6,12 @@
 
     <meta
         name="description"
-        content="Portfolio of Abdulrhman BenHassan - Data Analyst, UI/UX Designer and Front-End Developer."
+        content="Abdulrhman BenHassan - Data Analyst working with SQL, Power BI and Excel. Canadian citizen, open to data analyst and business intelligence roles in Canada."
     >
 
-    <title>Abdulrhman BenHassan | Portfolio</title>
+    <title>Abdulrhman BenHassan | Data Analyst - SQL, Power BI &amp; Excel</title>
+
+    <script>document.documentElement.classList.add("js");</script>
 
     <link rel="stylesheet" href="style.css">
 
@@ -25,32 +27,46 @@
 
 <body>
 
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- NAVIGATION -->
 
     <header class="header">
 
-        <nav class="navbar container">
+        <nav class="navbar container" aria-label="Main">
 
-            <a href="#home" class="logo">
+            <a href="#home" class="logo" aria-label="Abdulrhman BenHassan, home">
                 AB<span>.</span>
             </a>
 
-                    <div class="nav-links" id="navLinks">
+            <div class="nav-links" id="navLinks">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
-                <a href="#projects">Project</a>
+                <a href="#projects">Work</a>
                 <a href="#skills">Skills</a>
                 <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
 
-                <a href="#contact" class="nav-contact">Contact</a>
+                <a
+                    href="assets/Abdulrhman_BenHassan_Resume.pdf"
+                    class="nav-contact nav-resume"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Résumé <span aria-hidden="true">↗</span>
+                    <span class="sr-only">(PDF, opens in a new tab)</span>
+                </a>
             </div>
 
             <button
                 class="menu-btn"
                 id="menuBtn"
                 aria-label="Open navigation menu"
+                aria-controls="navLinks"
+                aria-expanded="false"
+                type="button"
             >
-                ☰
+                <span aria-hidden="true">☰</span>
             </button>
 
         </nav>
@@ -58,7 +74,7 @@
     </header>
 
 
-    <main>
+    <main id="main">
 
         <!-- HERO -->
 
@@ -69,87 +85,115 @@
                 <div class="hero-content reveal">
 
                     <div class="status">
-                        <span class="status-dot"></span>
-                        Portfolio 2026
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Open to Data Analyst &amp; BI roles in Canada
                     </div>
 
-                    <p class="eyebrow">
-                        DATA • DESIGN • DEVELOPMENT
-                    </p>
+                    <h1 class="typing-name" aria-label="Abdulrhman BenHassan">
 
-                     <h1 class="typing-name">
+                        <span id="firstName" aria-hidden="true">Abdulrhman</span>
 
-                    <span id="firstName"></span>
-
-                    <span class="last-name-line">
-                        <span id="lastName"></span>
-                        <span class="typing-cursor">|</span>
-                    </span>
+                        <span class="last-name-line" aria-hidden="true">
+                            <span id="lastName">BenHassan.</span>
+                            <span class="typing-cursor">|</span>
+                        </span>
 
                     </h1>
 
-                    <h2>
-                        Data Analyst, UI/UX Designer
-                        <br>
-                        & Front-End Developer.
-                    </h2>
+                    <p class="hero-role">
+                        Data Analyst | SQL, Power BI &amp; Excel
+                    </p>
 
                     <p class="hero-description">
-                        I turn data, ideas and complex information
-                        into clear digital experiences that people
-                        can understand and use.
+                        I've worked as a data analyst at Libya's Ministry of
+                        Oil and Gas since 2024. I analyse industry and
+                        operational data and turn it into Power BI dashboards
+                        and reports that non-technical stakeholders can act on.
+                        My web development and UX background helps me make
+                        reports clear and easy to use.
+                    </p>
+
+                    <p class="hero-availability">
+                        Canadian citizen · No sponsorship required ·
+                        <mark class="draft">DRAFT: Canadian city · relocation · on-site/hybrid/remote</mark>
                     </p>
 
                     <div class="hero-buttons">
 
-                                <a
-                                    href="work.html"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="btn btn-primary"
-                                >
-                                    View My Work
-                                    <span>↗</span>
-                                </a>
-                        <a href="#about" class="btn btn-secondary">
-                            About Me
+                        <a href="oil-price-dashboard.html" class="btn btn-primary">
+                            Read the dashboard case study
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a
+                            href="assets/Abdulrhman_BenHassan_Resume.pdf"
+                            class="btn btn-secondary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Résumé (PDF)
+                            <span aria-hidden="true">↗</span>
+                            <span class="sr-only">opens in a new tab</span>
                         </a>
 
                     </div>
 
+                    <ul class="hero-links" aria-label="Profiles and contact">
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/abdulrhman-benhassn-a7552919a/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >LinkedIn</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/abduljr204"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >GitHub</a>
+                        </li>
+                        <li>
+                            <a href="mailto:benhassanabdulrhman@gmail.com">Email</a>
+                        </li>
+                    </ul>
+
                 </div>
-                            <div class="hero-card reveal">
 
-                        <img
-                            src="assets/images/me.jpeg"
-                            alt="Abdulrhman BenHassan"
-                            class="hero-profile-image"
-                        >
+                <div class="hero-card reveal">
 
-                        <div class="hero-card-overlay"></div>
+                    <img
+                        src="assets/images/me.jpeg"
+                        alt="Portrait of Abdulrhman BenHassan"
+                        class="hero-profile-image"
+                        width="1280"
+                        height="1042"
+                    >
 
-                        <div class="card-top">
-                            <span>PROFILE</span>
-                            <span class="card-number">01</span>
+                    <div class="hero-card-overlay"></div>
+
+                    <div class="card-top" aria-hidden="true">
+                        <span>PROFILE</span>
+                        <span class="card-number">01</span>
+                    </div>
+
+                    <div class="hero-card-bottom">
+
+                        <div>
+                            <small>BASED IN</small>
+                            <p>Canada &amp; Libya</p>
                         </div>
 
-                        <div class="hero-card-bottom">
-
-                            <div>
-                                <small>BASED IN</small>
-                                <p>Libya / Canada</p>
-                            </div>
-
-                            <div>
-                                <small>FOCUS</small>
-                                <p>Data + Digital Products</p>
-                            </div>
-
+                        <div>
+                            <small>FOCUS</small>
+                            <p>Data analysis &amp; BI reporting</p>
                         </div>
 
                     </div>
 
-                    </div>
+                </div>
+
+            </div>
 
             <div class="hero-line"></div>
 
@@ -158,7 +202,7 @@
 
         <!-- ABOUT -->
 
-        <section class="section" id="about">
+        <section class="section" id="about" aria-labelledby="about-title">
 
             <div class="container">
 
@@ -168,9 +212,9 @@
                         01 / ABOUT
                     </p>
 
-                    <h2>
-                        Turning complexity
-                        <span>into clarity.</span>
+                    <h2 id="about-title">
+                        Turning complex data
+                        <span>into clear decisions.</span>
                     </h2>
 
                 </div>
@@ -181,9 +225,8 @@
                     <div class="about-large reveal">
 
                         <p>
-                            I'm a Data Analyst, UI/UX Designer and
-                            Front-End Developer with a background in
-                            web development and digital design.
+                            I'm a data analyst who makes complex information
+                            easy to read, check and act on.
                         </p>
 
                     </div>
@@ -192,17 +235,24 @@
                     <div class="about-text reveal">
 
                         <p>
-                            I enjoy working at the intersection of
-                            technology, data and design. My work focuses
-                            on transforming complex information into
-                            dashboards, applications, interfaces and
-                            reports that are easy to understand.
+                            At the Ministry of Oil and Gas I analyse datasets in
+                            Excel and Google Sheets, keep reporting data accurate,
+                            and build Power BI dashboards that present KPIs and
+                            industry trends to stakeholders.
+                            <mark class="draft">DRAFT: how you use SQL, reporting frequency and audience</mark>
                         </p>
 
                         <p>
-                            My background in web development allows me
-                            to approach problems from both a technical
-                            and design perspective.
+                            At the High National Election Commission I worked on
+                            voter registration data, where accuracy and data
+                            quality mattered most.
+                        </p>
+
+                        <p>
+                            I also have a diploma in Web Development and Internet
+                            Applications and Google UX Design training. That
+                            background helps me design dashboards and reports
+                            around the people who use them.
                         </p>
 
                     </div>
@@ -216,7 +266,7 @@
 
         <!-- EXPERIENCE -->
 
-        <section class="section section-dark" id="experience">
+        <section class="section section-dark" id="experience" aria-labelledby="experience-title">
 
             <div class="container">
 
@@ -226,7 +276,7 @@
                         02 / EXPERIENCE
                     </p>
 
-                    <h2>
+                    <h2 id="experience-title">
                         Professional
                         <span>experience.</span>
                     </h2>
@@ -240,30 +290,48 @@
 
                         <div class="experience-date">
                             2024 — PRESENT
+                            <br>
+                            <mark class="draft">DRAFT: start month · employment type</mark>
                         </div>
 
                         <div class="experience-main">
 
                             <h3>
-                                Ministry of Oil & Gas
+                                Ministry of Oil and Gas
                             </h3>
 
                             <p class="experience-role">
-                                Data Analyst / Information Systems
+                                Data Analyst · Libya (on-site &amp; remote)
                             </p>
 
+                            <ul class="experience-points">
+                                <li>
+                                    Analyse complex datasets in Excel and Google
+                                    Sheets to support decision-making and keep
+                                    reporting data accurate.
+                                </li>
+                                <li>
+                                    Build reports and interactive Power BI
+                                    dashboards that present KPIs and industry
+                                    trends to stakeholders.
+                                </li>
+                                <li>
+                                    Turn complex operational information into clear
+                                    visual summaries and presentations for
+                                    non-technical audiences.
+                                </li>
+                            </ul>
+
                             <p class="experience-description">
-                                Working with economic and energy data,
-                                international market research,
-                                visualization, forecasting and executive
-                                reporting.
+                                <mark class="draft">DRAFT: SQL use · dataset types · reporting frequency · audience · verified results</mark>
                             </p>
 
                             <div class="tags">
 
                                 <span>Power BI</span>
                                 <span>Excel</span>
-                                <span>Research</span>
+                                <span>Google Sheets</span>
+                                <span>KPI Reporting</span>
                                 <span>Data Visualization</span>
 
                             </div>
@@ -272,42 +340,89 @@
 
                     </article>
 
-                <article class="experience-item reveal">
+                    <article class="experience-item reveal">
 
-                    <div class="experience-date">
-                        2024 — 2025
-                    </div>
+                        <div class="experience-date">
+                            2024 — 2025
+                            <br>
+                            <mark class="draft">DRAFT: months · part-time / temporary / contract</mark>
+                        </div>
 
-                    <div class="experience-main">
+                        <div class="experience-main">
 
-                        <h3>
-                            High National Election Commission
-                        </h3>
+                            <h3>
+                                High National Election Commission
+                            </h3>
 
-                        <p class="experience-role">
-                            Data Entry Clerk
-                        </p>
+                            <p class="experience-role">
+                                Data Entry Clerk · Libya
+                            </p>
 
-                        <p class="experience-description">
-                            Managed voter registration data with a strong focus on
-                            accuracy, compliance and data quality. Identified and
-                            resolved data discrepancies across large volumes of records
-                            while helping maintain database integrity and reliable
-                            information for election operations.
-                        </p>
+                            <ul class="experience-points">
+                                <li>
+                                    Managed voter registration data end to end,
+                                    with a focus on compliance, accuracy and data
+                                    quality.
+                                </li>
+                                <li>
+                                    Found and resolved data discrepancies across
+                                    large volumes of records, which helped keep the
+                                    database reliable for election-day operations.
+                                </li>
+                            </ul>
 
-                        <div class="tags">
+                            <div class="tags">
 
-                            <span>Data Entry</span>
-                            <span>Data Quality</span>
-                            <span>Database Management</span>
-                            <span>Data Validation</span>
+                                <span>Data Quality</span>
+                                <span>Data Validation</span>
+                                <span>Database Integrity</span>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </article>
 
-                </article>
+                    <article class="experience-item reveal">
+
+                        <div class="experience-date">
+                            2023 — 2024
+                            <br>
+                            <mark class="draft">DRAFT: employment or academic project?</mark>
+                        </div>
+
+                        <div class="experience-main">
+
+                            <h3>
+                                St. Clair College – El Mercadito
+                            </h3>
+
+                            <p class="experience-role">
+                                Graphic Designer / Front-End Developer · Windsor, ON
+                            </p>
+
+                            <ul class="experience-points">
+                                <li>
+                                    Created wireframes and interface designs in
+                                    Figma and Adobe Photoshop.
+                                </li>
+                                <li>
+                                    Designed graphics in Adobe Illustrator and built
+                                    responsive pages with HTML5 and CSS.
+                                </li>
+                            </ul>
+
+                            <div class="tags">
+
+                                <span>Figma</span>
+                                <span>HTML &amp; CSS</span>
+                                <span>Illustrator</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
@@ -316,305 +431,232 @@
         </section>
 
 
-        <!-- FEATURED PROJECT -->
+        <!-- FEATURED PROJECTS -->
 
-<!-- ========================================
-     FEATURED PROJECTS
-======================================== -->
-
-<section class="section featured-projects-section" id="projects">
-
-    <div class="container">
-
-        <div class="section-heading reveal">
-
-            <p class="section-number">
-                03 / FEATURED PROJECTS
-            </p>
-
-            <h2>
-                Selected
-                <span>work.</span>
-            </h2>
-
-        </div>
-
-
-        <!-- ========================================
-             PROJECT 01 - POWER BI DASHBOARD
-        ======================================== -->
-
-        <article class="featured-project-card dashboard-project">
-
-            <div class="featured-project-visual reveal">
-
-                <img
-                    src="assets/images/oil-price-dashboard.png"
-                    alt="Global Oil Price Analysis Dashboard"
-                    class="featured-dashboard-image"
-                >
-
-                <span class="project-index">
-                    01
-                </span>
-
-            </div>
-
-
-            <div class="featured-project-content reveal">
-
-                <p class="featured-project-type">
-                    POWER BI / ENERGY ANALYTICS
-                </p>
-
-                <h3>
-                    Global Oil Price
-                    Analysis Dashboard
-                </h3>
-
-                <p class="featured-project-description">
-                    A Power BI dashboard designed to monitor and compare
-                    WTI, Brent, OPEC Basket and Es Sider crude oil prices.
-                </p>
-
-                <p class="featured-project-description">
-                    The dashboard presents KPI cards, daily price
-                    movements, period comparisons and trend analysis
-                    in a clear, executive-friendly format.
-                </p>
-
-
-                <div class="featured-project-skills">
-
-                    <span>Power BI</span>
-                    <span>Excel</span>
-                    <span>Data Visualization</span>
-                    <span>KPI Design</span>
-                    <span>Trend Analysis</span>
-                    <span>Energy Analytics</span>
-
-                </div>
-
-
-                <div class="project-capabilities">
-
-                    <div>
-                        <span>01</span>
-                        <p>KPI Monitoring</p>
-                    </div>
-
-                    <div>
-                        <span>02</span>
-                        <p>Price Trend Analysis</p>
-                    </div>
-
-                    <div>
-                        <span>03</span>
-                        <p>Period Comparison</p>
-                    </div>
-
-                    <div>
-                        <span>04</span>
-                        <p>Executive Reporting</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- ========================================
-             PROJECT 02 - LIBYA FUEL
-        ======================================== -->
-
-        <article class="featured-project-card fuel-project">
-
-            <div class="featured-project-visual fuel-visual reveal">
-
-                <div class="phone">
-
-                    <div class="phone-header">
-
-                        <div>
-                            <small>GOOD MORNING</small>
-                            <p>Find Fuel</p>
-                        </div>
-
-                        <span>●</span>
-
-                    </div>
-
-
-                    <div class="fake-search">
-                        Search fuel stations
-                    </div>
-
-
-                    <div class="station-card">
-
-                        <div class="station-row">
-
-                            <div>
-                                <strong>
-                                    Al-Andalus Station
-                                </strong>
-
-                                <small>
-                                    1.2 km away
-                                </small>
-                            </div>
-
-                            <span class="open">
-                                OPEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="station-stats">
-
-                            <span>
-                                ⛽ Fuel Available
-                            </span>
-
-                            <span>
-                                🚗 Medium Queue
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="station-card">
-
-                        <div class="station-row">
-
-                            <div>
-
-                                <strong>
-                                    Tripoli Central
-                                </strong>
-
-                                <small>
-                                    2.8 km away
-                                </small>
-
-                            </div>
-
-                            <span class="open">
-                                OPEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="station-stats">
-
-                            <span>
-                                ⛽ Fuel Available
-                            </span>
-
-                            <span>
-                                🚗 Low Queue
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <span class="project-index dark-index">
-                    02
-                </span>
-
-            </div>
-
-
-            <div class="featured-project-content reveal">
-
-                <p class="featured-project-type">
-                    UI/UX / PRODUCT DEVELOPING
-                </p>
-
-                <h3>
-                    Libya Fuel
-                </h3>
-
-                <p class="featured-project-description">
-                    A digital platform concept designed to help
-                    drivers in Libya find fuel stations and understand
-                    station conditions before travelling.
-                </p>
-
-
-                <div class="featured-project-skills">
-
-                    <span>UI/UX</span>
-                    <span>Figma</span>
-                    <span>Product Design</span>
-                    <span>Front-End</span>
-
-                </div>
-
-
-                <div class="project-capabilities">
-
-                    <div>
-                        <span>01</span>
-                        <p>Station Availability</p>
-                    </div>
-
-                    <div>
-                        <span>02</span>
-                        <p>Queue Levels</p>
-                    </div>
-
-                    <div>
-                        <span>03</span>
-                        <p>Working Pumps</p>
-                    </div>
-
-                    <div>
-                        <span>04</span>
-                        <p>Map Discovery</p>
-                    </div>
-
-                </div>
-
-
-                <span class="case-study-coming">
-                    Full case study coming soon ↗
-                </span>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-        <!-- SKILLS -->
-
-        <section class="section" id="skills">
+        <section class="section featured-projects-section" id="projects" aria-labelledby="projects-title">
 
             <div class="container">
 
                 <div class="section-heading reveal">
 
                     <p class="section-number">
-                        04/ SKILLS
+                        03 / SELECTED WORK
                     </p>
 
-                    <h2>
+                    <h2 id="projects-title">
+                        Selected
+                        <span>work.</span>
+                    </h2>
+
+                </div>
+
+
+                <!-- PROJECT 01 - POWER BI DASHBOARD -->
+
+                <article class="featured-project-card dashboard-project">
+
+                    <a
+                        href="oil-price-dashboard.html"
+                        class="featured-project-visual reveal"
+                        tabindex="-1"
+                        aria-hidden="true"
+                    >
+
+                        <img
+                            src="assets/images/oil-price-dashboard.png"
+                            alt=""
+                            class="featured-dashboard-image"
+                            width="2767"
+                            height="1600"
+                        >
+
+                        <span class="project-index">
+                            01
+                        </span>
+
+                    </a>
+
+
+                    <div class="featured-project-content reveal">
+
+                        <p class="featured-project-type">
+                            CASE STUDY · POWER BI · ENERGY PRICES
+                        </p>
+
+                        <h3>
+                            Global Oil Price
+                            Analysis Dashboard
+                        </h3>
+
+                        <p class="featured-project-description">
+                            A Power BI dashboard comparing WTI, Brent, OPEC
+                            Basket and Es Sider crude prices. It includes KPI
+                            cards, daily price movements, a daily price table and
+                            a period comparison.
+                        </p>
+
+                        <div class="featured-project-skills">
+
+                            <span>Power BI</span>
+                            <span>KPI Design</span>
+                            <span>Trend Analysis</span>
+                            <span>Data Visualization</span>
+
+                        </div>
+
+                        <a href="oil-price-dashboard.html" class="btn btn-primary project-cta">
+                            Read the case study
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 02 - LIBYA FUEL -->
+
+                <article class="featured-project-card fuel-project">
+
+                    <div class="featured-project-visual fuel-visual reveal">
+
+                        <figure class="phone-figure">
+
+                            <div class="phone" aria-hidden="true">
+
+                                <div class="phone-header">
+
+                                    <div>
+                                        <small>GOOD MORNING</small>
+                                        <p>Find Fuel</p>
+                                    </div>
+
+                                    <span>●</span>
+
+                                </div>
+
+
+                                <div class="fake-search">
+                                    Search fuel stations
+                                </div>
+
+
+                                <div class="station-card">
+
+                                    <div class="station-row">
+
+                                        <div>
+                                            <strong>Station A</strong>
+                                            <small>1.2 km away</small>
+                                        </div>
+
+                                        <span class="open">OPEN</span>
+
+                                    </div>
+
+                                    <div class="station-stats">
+                                        <span>⛽ Fuel available</span>
+                                        <span>🚗 Medium queue</span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="station-card">
+
+                                    <div class="station-row">
+
+                                        <div>
+                                            <strong>Station B</strong>
+                                            <small>2.8 km away</small>
+                                        </div>
+
+                                        <span class="open">OPEN</span>
+
+                                    </div>
+
+                                    <div class="station-stats">
+                                        <span>⛽ Fuel available</span>
+                                        <span>🚗 Low queue</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <figcaption class="mockup-caption">
+                                Illustrative mockup with sample data
+                            </figcaption>
+
+                        </figure>
+
+                        <span class="project-index dark-index">
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="featured-project-content reveal">
+
+                        <p class="featured-project-type">
+                            UX CONCEPT · IN DEVELOPMENT
+                        </p>
+
+                        <h3>
+                            Libya Fuel
+                        </h3>
+
+                        <p class="featured-project-description">
+                            A concept for a mobile service that would help
+                            drivers in Libya find fuel stations and check
+                            station conditions before travelling. This is an
+                            early-stage concept, not a launched product.
+                        </p>
+
+                        <p class="featured-project-subhead">Completed so far</p>
+
+                        <p class="featured-project-description">
+                            <mark class="draft">DRAFT: only list research, wireframes, prototypes or tests you've actually completed</mark>
+                        </p>
+
+                        <p class="featured-project-subhead">Planned features</p>
+
+                        <ul class="project-capabilities">
+                            <li><span>01</span><p>Station availability</p></li>
+                            <li><span>02</span><p>Queue levels</p></li>
+                            <li><span>03</span><p>Working pumps</p></li>
+                            <li><span>04</span><p>Map discovery</p></li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+                <p class="projects-more reveal">
+                    <a href="work.html" class="text-link">See all work →</a>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+
+        <section class="section" id="skills" aria-labelledby="skills-title">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">
+                        04 / SKILLS
+                    </p>
+
+                    <h2 id="skills-title">
                         Tools I use to
-                        <span>build & analyze.</span>
+                        <span>analyse &amp; report.</span>
                     </h2>
 
                 </div>
@@ -624,17 +666,17 @@
 
                     <div class="skill-card reveal">
 
-                        <span class="skill-number">
-                            01
-                        </span>
+                        <span class="skill-number">01</span>
 
-                        <h3>
-                            Data
-                        </h3>
+                        <h3>Data &amp; BI</h3>
 
                         <p>
-                            Power BI, Excel, SQL, Power Query,
-                            Data Visualization, Forecasting
+                            SQL, Power BI, Excel, Google Sheets, dashboards,
+                            KPI reporting, data validation and data quality
+                        </p>
+
+                        <p>
+                            <mark class="draft">DRAFT: confirm SQL dialect · Power Query · forecasting</mark>
                         </p>
 
                     </div>
@@ -642,17 +684,14 @@
 
                     <div class="skill-card reveal">
 
-                        <span class="skill-number">
-                            02
-                        </span>
+                        <span class="skill-number">02</span>
 
-                        <h3>
-                            Development
-                        </h3>
+                        <h3>Communication</h3>
 
                         <p>
-                            HTML, CSS, JavaScript, React,
-                            Angular, Bootstrap
+                            Stakeholder reporting, visual summaries and
+                            presentations for non-technical audiences.
+                            English and Arabic.
                         </p>
 
                     </div>
@@ -660,17 +699,13 @@
 
                     <div class="skill-card reveal">
 
-                        <span class="skill-number">
-                            03
-                        </span>
+                        <span class="skill-number">03</span>
 
-                        <h3>
-                            UI / UX
-                        </h3>
+                        <h3>UX &amp; Design</h3>
 
                         <p>
-                            Figma, Wireframing, Prototyping,
-                            User Flows, Responsive Design
+                            Figma, wireframing, UI/UX design, Adobe Photoshop,
+                            Adobe Illustrator
                         </p>
 
                     </div>
@@ -678,17 +713,16 @@
 
                     <div class="skill-card reveal">
 
-                        <span class="skill-number">
-                            04
-                        </span>
+                        <span class="skill-number">04</span>
 
-                        <h3>
-                            Design
-                        </h3>
+                        <h3>Web Development</h3>
 
                         <p>
-                            Photoshop, Illustrator, Canva,
-                            Visual Communication
+                            HTML, CSS, JavaScript, C#, ASP.NET, PHP
+                        </p>
+
+                        <p>
+                            <mark class="draft">DRAFT: keep React · Angular · Bootstrap?</mark>
                         </p>
 
                     </div>
@@ -702,7 +736,7 @@
 
         <!-- EDUCATION -->
 
-        <section class="section education-section" id="education">
+        <section class="section education-section" id="education" aria-labelledby="education-title">
 
             <div class="container">
 
@@ -712,9 +746,9 @@
                         05 / EDUCATION
                     </p>
 
-                    <h2>
-                        Education &
-                        <span>certifications.</span>
+                    <h2 id="education-title">
+                        Education &amp;
+                        <span>certification.</span>
                     </h2>
 
                 </div>
@@ -725,16 +759,16 @@
                     <article class="education-card reveal">
 
                         <p class="education-year">
-                            ST. CLAIR COLLEGE
+                            ST. CLAIR COLLEGE · 2022 — 2024
                         </p>
 
                         <h3>
-                            Web Development &
+                            Web Development &amp;
                             Internet Applications
                         </h3>
 
                         <p>
-                            Windsor, Ontario, Canada
+                            Diploma · Windsor, Ontario, Canada
                         </p>
 
                     </article>
@@ -743,16 +777,16 @@
                     <article class="education-card reveal">
 
                         <p class="education-year">
-                            GOOGLE
+                            GOOGLE · COURSERA · 2025
                         </p>
 
                         <h3>
-                            UX Design
+                            Google UX Design
                             Certificate
                         </h3>
 
                         <p>
-                            UI/UX Design & User Experience
+                            <mark class="draft">DRAFT: exact title from credential · completion month · credential link</mark>
                         </p>
 
                     </article>
@@ -766,63 +800,86 @@
 
         <!-- CONTACT -->
 
-        <section class="contact-section" id="contact">
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
 
             <div class="container">
 
                 <div class="contact-content reveal">
 
                     <p class="section-number">
-                        06/ CONTACT
+                        06 / CONTACT
                     </p>
 
-                    <h2>
-                        Have an idea?
+                    <h2 id="contact-title">
+                        Hiring a
                         <br>
-                        <span>Let's build it.</span>
+                        <span>data analyst?</span>
                     </h2>
 
                     <p>
-                        I'm interested in opportunities involving
-                        data analysis, digital products, UI/UX
-                        and front-end development.
+                        I'm open to Data Analyst and Business Intelligence
+                        roles in Canada. I'm a Canadian citizen and don't need
+                        sponsorship.
+                        <mark class="draft">DRAFT: Canadian city · relocation preferences · on-site/hybrid/remote · start date</mark>
                     </p>
 
                     <a
-                        href="mailto:benhassnabdulrhman@gmail.com"
+                        href="mailto:benhassanabdulrhman@gmail.com"
                         class="contact-email"
                     >
-                        benhassnabdulrhman@gmail.com
-                        <span>↗</span>
+                        benhassanabdulrhman@gmail.com
+                        <span aria-hidden="true">↗</span>
                     </a>
 
                 </div>
 
 
-                <div class="contact-links reveal">
+                <ul class="contact-links reveal" aria-label="Profiles and résumé">
 
-                    <a
-                        href="https://github.com/abduljr204"
-                        target="_blank"
-                    >
-                        GitHub
-                        <span>↗</span>
-                    </a>
+                    <li>
+                        <a
+                            href="assets/Abdulrhman_BenHassan_Resume.pdf"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Résumé (PDF)
+                            <span aria-hidden="true">↗</span>
+                            <span class="sr-only">opens in a new tab</span>
+                        </a>
+                    </li>
 
-                    <a
-                        href="https://www.linkedin.com/in/abdulrhman-benhassn-a7552919a/"
-                        target="_blank"
-                    >
-                        LinkedIn
-                        <span>↗</span>
-                    </a>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/abdulrhman-benhassn-a7552919a/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                            <span aria-hidden="true">↗</span>
+                            <span class="sr-only">opens in a new tab</span>
+                        </a>
+                    </li>
 
-                    <a href="#home">
-                        Back to top
-                        <span>↑</span>
-                    </a>
+                    <li>
+                        <a
+                            href="https://github.com/abduljr204"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                            <span aria-hidden="true">↗</span>
+                            <span class="sr-only">opens in a new tab</span>
+                        </a>
+                    </li>
 
-                </div>
+                    <li>
+                        <a href="#home">
+                            Back to top
+                            <span aria-hidden="true">↑</span>
+                        </a>
+                    </li>
+
+                </ul>
 
             </div>
 
@@ -840,7 +897,7 @@
             </p>
 
             <p>
-                Designed & developed by Abdul.
+                Designed &amp; built by Abdulrhman BenHassan.
             </p>
 
         </div>
@@ -848,7 +905,7 @@
     </footer>
 
 
-   <script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>

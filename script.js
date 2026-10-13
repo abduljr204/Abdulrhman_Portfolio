@@ -1,201 +1,113 @@
-// MOBILE NAVIGATION
-
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
 if (menuBtn && navLinks) {
     menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+        const isOpen = navLinks.classList.toggle("active");
+        menuBtn.setAttribute("aria-expanded", String(isOpen));
+        menuBtn.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
     });
-}
 
-
-// CLOSE MOBILE MENU AFTER CLICKING A LINK
-
-if (navLinks) {
     document.querySelectorAll(".nav-links a").forEach(link => {
-
         link.addEventListener("click", () => {
             navLinks.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Open navigation menu");
         });
+    });
 
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Open navigation menu");
+            menuBtn.focus();
+        }
     });
 }
-
-
-// SCROLL REVEAL ANIMATION
-
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealObserver = new IntersectionObserver(
-    entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("active");
-
-                revealObserver.unobserve(entry.target);
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.12
-    }
-);
-
-revealElements.forEach(element => {
-    revealObserver.observe(element);
-});
-
-
-// NAVBAR SHADOW WHEN SCROLLING
 
 const header = document.querySelector(".header");
 
 if (header) {
     window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 30) {
-
-            header.style.boxShadow =
-                "0 10px 40px rgba(0,0,0,0.05)";
-
-        } else {
-
-            header.style.boxShadow = "none";
-
-        }
-
+        header.style.boxShadow = window.scrollY > 30
+            ? "0 10px 40px rgba(0,0,0,0.05)"
+            : "none";
     });
 }
 
-// NAME TYPEWRITER EFFECT
-
-const firstNameElement = document.getElementById("firstName");
-const lastNameElement = document.getElementById("lastName");
-
-const firstNameText = "Abdulrhman";
-const lastNameText = "BenHassan.";
-
-let firstIndex = 0;
-let lastIndex = 0;
-
-function typeFirstName() {
-    if (firstIndex < firstNameText.length) {
-        firstNameElement.textContent += firstNameText.charAt(firstIndex);
-        firstIndex++;
-
-        setTimeout(typeFirstName, 90);
-    } else {
-        setTimeout(typeLastName, 250);
-    }
-}
-
-function typeLastName() {
-
-    if (lastIndex < lastNameText.length) {
-
-        lastNameElement.textContent +=
-            lastNameText.charAt(lastIndex);
-
-        lastIndex++;
-
-        setTimeout(typeLastName, 90);
-
-    } else {
-
-        setTimeout(() => {
-
-            document.querySelector(".typing-cursor")
-                .style.display = "none";
-
-        }, 1200);
-
-    }
-
-}
-
-/* ========================================
-   NAME TYPEWRITER
-======================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
+    const revealElements = document.querySelectorAll(".reveal");
+    const revealImmediately = () => {
+        revealElements.forEach(element => element.classList.add("active"));
+    };
 
-    const firstNameElement =
-        document.getElementById("firstName");
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12 }
+        );
 
-    const lastNameElement =
-        document.getElementById("lastName");
+        revealElements.forEach(element => revealObserver.observe(element));
+    } else {
+        revealImmediately();
+    }
 
-    const cursor =
-        document.querySelector(".typing-cursor");
+    const firstNameElement = document.getElementById("firstName");
+    const lastNameElement = document.getElementById("lastName");
+    const cursor = document.querySelector(".typing-cursor");
 
     if (!firstNameElement || !lastNameElement || !cursor) {
         return;
     }
 
+    // The name is already in the HTML, so it shows without JS or animation.
+    const firstName = firstNameElement.textContent.trim();
+    const lastName = lastNameElement.textContent.trim();
 
-    const firstName = "Abdulrhman";
-    const lastName = "BenHassan.";
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        cursor.style.opacity = "0";
+        return;
+    }
+
+    firstNameElement.textContent = "";
+    lastNameElement.textContent = "";
 
     let firstIndex = 0;
     let lastIndex = 0;
 
+    function typeLastName() {
+        if (lastIndex < lastName.length) {
+            lastNameElement.textContent += lastName[lastIndex];
+            lastIndex++;
+            setTimeout(typeLastName, 90);
+        } else {
+            setTimeout(() => {
+                cursor.style.opacity = "0";
+            }, 1500);
+        }
+    }
 
     function typeFirstName() {
-
         if (firstIndex < firstName.length) {
-
-            firstNameElement.textContent +=
-                firstName[firstIndex];
-
+            firstNameElement.textContent += firstName[firstIndex];
             firstIndex++;
-
             setTimeout(typeFirstName, 90);
-
         } else {
-
             setTimeout(typeLastName, 250);
-
         }
-
     }
-
-
-    function typeLastName() {
-
-        if (lastIndex < lastName.length) {
-
-            lastNameElement.textContent +=
-                lastName[lastIndex];
-
-            lastIndex++;
-
-            setTimeout(typeLastName, 90);
-
-        } else {
-
-            /* Hide cursor after typing finishes */
-
-            setTimeout(() => {
-
-                cursor.style.opacity = "0";
-
-            }, 1500);
-
-        }
-
-    }
-
-
-    /* Start shortly after page loads */
 
     setTimeout(typeFirstName, 500);
-
 });
-
 

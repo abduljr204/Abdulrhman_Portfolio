@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Case study: a Power BI dashboard by Abdulrhman BenHassan comparing WTI, Brent, OPEC Basket and Es Sider crude oil prices."
+    >
+
+    <title>Oil Price Dashboard Case Study | Abdulrhman BenHassan</title>
+
+    <script>document.documentElement.classList.add("js");</script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="workstyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="work-page case-study-page">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+
+    <!-- ========================================
+         NAVIGATION
+    ======================================== -->
+
+    <header class="work-header">
+
+        <nav class="container work-nav" aria-label="Main">
+
+            <a href="index.html" class="logo" aria-label="Abdulrhman BenHassan, home">
+                AB<span>.</span>
+            </a>
+
+            <div class="work-nav-links">
+
+                <a href="index.html" class="back-home">
+                    ← Portfolio
+                </a>
+
+                <a href="work.html" class="back-home">
+                    All work
+                </a>
+
+                <a
+                    href="assets/Abdulrhman_BenHassan_Resume.pdf"
+                    class="back-home"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Résumé (PDF)
+                    <span class="sr-only">opens in a new tab</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main id="main">
+
+
+        <!-- ========================================
+             CASE STUDY HERO
+        ======================================== -->
+
+        <section class="work-hero cs-hero">
+
+            <div class="container">
+
+                <p class="work-eyebrow">
+                    CASE STUDY · POWER BI · ENERGY PRICES
+                </p>
+
+                <h1>
+                    Global Oil Price
+                    <span>Analysis Dashboard.</span>
+                </h1>
+
+                <p class="work-intro">
+                    A Power BI dashboard that compares four crude oil benchmarks
+                    in July 2025: WTI, Brent, the OPEC Basket and Libya's Es Sider
+                    grade. It uses KPI cards, daily trend lines, a daily price
+                    table and a comparison of the first and second halves of
+                    the month.
+                </p>
+
+                <p class="draft draft-block">
+                    DRAFT, DATA CHECK NEEDED BEFORE PUBLISHING:
+                    the dashboard shows Brent at $85–87 on 28–30 July 2025, but
+                    front-month Brent settled at $69.67 on 1 August 2025.
+                    Confirm the source and dates, or label this as a practice
+                    dataset. Fix the period comparison table too (see
+                    Limitations).
+                </p>
+
+                <dl class="cs-facts">
+
+                    <div>
+                        <dt>Role</dt>
+                        <dd><mark class="draft">DRAFT: e.g. sole analyst and designer</mark></dd>
+                    </div>
+
+                    <div>
+                        <dt>Tools</dt>
+                        <dd>Power BI <mark class="draft">DRAFT: other tools actually used</mark></dd>
+                    </div>
+
+                    <div>
+                        <dt>Data covered</dt>
+                        <dd>Daily prices, 1–30 July 2025</dd>
+                    </div>
+
+                    <div>
+                        <dt>Built</dt>
+                        <dd><mark class="draft">DRAFT: month / year</mark></dd>
+                    </div>
+
+                </dl>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             DASHBOARD
+        ======================================== -->
+
+        <section class="cs-figure-section" aria-label="Dashboard screenshot">
+
+            <div class="container">
+
+                <figure class="cs-figure">
+
+                    <a href="assets/images/oil-price-dashboard.png" target="_blank" rel="noopener">
+                        <img
+                            src="assets/images/oil-price-dashboard.png"
+                            alt="Power BI dashboard. Four KPI cards show average prices: WTI $73.5, OPEC $76.6, Brent $77.8, Es Sider $74.5. A line chart shows daily prices for all four benchmarks rising from about $68–72 on 15 July to about $80–87 by 28 July. A daily price table lists values from 15 to 30 July, a comparison table shows first- versus second-half July averages, and an area chart shows Es Sider prices through July."
+                            width="2767"
+                            height="1600"
+                        >
+                    </a>
+
+                    <figcaption>
+                        The full dashboard. Select the image to open it at full
+                        size (opens in a new tab). The daily values are also
+                        listed in a table below.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             CASE STUDY BODY
+        ======================================== -->
+
+        <div class="container cs-body">
+
+            <section class="cs-section" aria-labelledby="cs-question">
+
+                <p class="cs-number">01</p>
+
+                <div>
+
+                    <h2 id="cs-question">Business question</h2>
+
+                    <p>
+                        <mark class="draft">DRAFT: the question this dashboard answers, who it was for, and what decision or report it supported</mark>
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="cs-section" aria-labelledby="cs-data">
+
+                <p class="cs-number">02</p>
+
+                <div>
+
+                    <h2 id="cs-data">Data sources</h2>
+
+                    <p>
+                        The dashboard uses daily prices in US dollars per barrel
+                        for four benchmarks. The KPI cards, line chart and
+                        daily table cover 15–30 July 2025. The Es Sider area
+                        chart covers all of July.
+                    </p>
+
+                    <div class="cs-table-wrap" tabindex="0" role="region" aria-labelledby="cs-sources-caption">
+                        <table class="cs-table">
+                            <caption id="cs-sources-caption">Benchmarks and sources</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Benchmark</th>
+                                    <th scope="col">What it is</th>
+                                    <th scope="col">Source</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">WTI</th>
+                                    <td>US light crude benchmark</td>
+                                    <td><mark class="draft">DRAFT</mark></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Brent</th>
+                                    <td>North Sea / international benchmark</td>
+                                    <td><mark class="draft">DRAFT</mark></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">OPEC Basket</th>
+                                    <td>Average of OPEC members' crudes</td>
+                                    <td><mark class="draft">DRAFT</mark></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Es Sider</th>
+                                    <td>Libyan export crude grade</td>
+                                    <td><mark class="draft">DRAFT</mark></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <mark class="draft">DRAFT: confirm all data is public and that no ministry-confidential data is shown</mark>
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="cs-section" aria-labelledby="cs-cleaning">
+
+                <p class="cs-number">03</p>
+
+                <div>
+
+                    <h2 id="cs-cleaning">Cleaning &amp; preparation</h2>
+
+                    <p>
+                        <mark class="draft">DRAFT: how the data was collected and cleaned (e.g. manual entry, date formats, missing days, duplicates). Only describe steps you actually took.</mark>
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="cs-section" aria-labelledby="cs-model">
+
+                <p class="cs-number">04</p>
+
+                <div>
+
+                    <h2 id="cs-model">Modelling &amp; calculations</h2>
+
+                    <p>
+                        The KPI cards show each benchmark's average daily price
+                        for 15–30 July. All four card values match the averages
+                        of the daily table to one decimal place.
+                        The comparison table sets the average for 1–15 July
+                        against the average for 15–30 July.
+                    </p>
+
+                    <p>
+                        <mark class="draft">DRAFT: how the model is built (tables, relationships, date table, measures). Don't mention DAX or SQL unless you used them here.</mark>
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="cs-section" aria-labelledby="cs-visuals">
+
+                <p class="cs-number">05</p>
+
+                <div>
+
+                    <h2 id="cs-visuals">Dashboard design</h2>
+
+                    <ul class="cs-list">
+                        <li>
+                            <strong>KPI cards:</strong> average price for each
+                            benchmark, colour-coded to match the chart lines.
+                        </li>
+                        <li>
+                            <strong>Line chart:</strong> daily prices for all
+                            four benchmarks on one axis, for direct comparison.
+                        </li>
+                        <li>
+                            <strong>Daily price table:</strong> the exact values
+                            behind the chart.
+                        </li>
+                        <li>
+                            <strong>Period comparison:</strong> first versus
+                            second half of July, with the difference.
+                        </li>
+                        <li>
+                            <strong>Es Sider area chart:</strong> the Libyan
+                            grade across the whole month.
+                        </li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <section class="cs-section" aria-labelledby="cs-findings">
+
+                <p class="cs-number">06</p>
+
+                <div>
+
+                    <h2 id="cs-findings">What the data shows</h2>
+
+                    <p class="draft draft-block">
+                        DRAFT: these figures are calculated from the dashboard's
+                        daily table. Finalise them only after the data check
+                        above.
+                    </p>
+
+                    <ul class="cs-list">
+                        <li>
+                            All four benchmarks ended the period higher than they
+                            started, rising 17% (WTI) to 21% (Es Sider) between
+                            15 and 30 July.
+                        </li>
+                        <li>
+                            Brent had the highest average ($77.8) and WTI the
+                            lowest ($73.5).
+                        </li>
+                        <li>
+                            Es Sider was priced below Brent on every date shown,
+                            by $3.3 per barrel on average.
+                        </li>
+                        <li>
+                            Prices rose most sharply on 22 July and again
+                            between 24 and 28 July.
+                        </li>
+                    </ul>
+
+                    <div class="cs-table-wrap" tabindex="0" role="region" aria-labelledby="cs-summary-caption">
+                        <table class="cs-table cs-table-numeric">
+                            <caption id="cs-summary-caption">Summary, 15–30 July 2025 (USD per barrel)</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Benchmark</th>
+                                    <th scope="col">15 Jul</th>
+                                    <th scope="col">30 Jul</th>
+                                    <th scope="col">Change</th>
+                                    <th scope="col">Average</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">WTI</th><td>68.6</td><td>80.5</td><td>+11.9 (+17.3%)</td><td>73.5</td></tr>
+                                <tr><th scope="row">OPEC Basket</th><td>71.7</td><td>86.2</td><td>+14.5 (+20.2%)</td><td>76.6</td></tr>
+                                <tr><th scope="row">Brent</th><td>71.6</td><td>85.4</td><td>+13.8 (+19.3%)</td><td>77.8</td></tr>
+                                <tr><th scope="row">Es Sider</th><td>68.1</td><td>82.7</td><td>+14.6 (+21.4%)</td><td>74.5</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <details class="cs-details">
+
+                        <summary>Show the daily price table (12 dates)</summary>
+
+                        <div class="cs-table-wrap" tabindex="0" role="region" aria-labelledby="cs-daily-caption">
+                            <table class="cs-table cs-table-numeric">
+                                <caption id="cs-daily-caption">Daily prices as shown in the dashboard (USD per barrel)</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">OPEC Basket</th>
+                                        <th scope="col">WTI</th>
+                                        <th scope="col">Brent</th>
+                                        <th scope="col">Es Sider</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">2025-07-15</th><td>71.7</td><td>68.6</td><td>71.6</td><td>68.1</td></tr>
+                                    <tr><th scope="row">2025-07-16</th><td>69.3</td><td>68.7</td><td>71.8</td><td>67.5</td></tr>
+                                    <tr><th scope="row">2025-07-17</th><td>69.8</td><td>68.7</td><td>72.1</td><td>67.5</td></tr>
+                                    <tr><th scope="row">2025-07-20</th><td>70.4</td><td>68.6</td><td>72.0</td><td>69.4</td></tr>
+                                    <tr><th scope="row">2025-07-21</th><td>72.4</td><td>70.4</td><td>74.2</td><td>71.4</td></tr>
+                                    <tr><th scope="row">2025-07-22</th><td>78.0</td><td>73.5</td><td>78.0</td><td>77.9</td></tr>
+                                    <tr><th scope="row">2025-07-23</th><td>76.3</td><td>72.1</td><td>76.3</td><td>74.9</td></tr>
+                                    <tr><th scope="row">2025-07-24</th><td>75.1</td><td>71.4</td><td>76.0</td><td>73.6</td></tr>
+                                    <tr><th scope="row">2025-07-27</th><td>78.0</td><td>78.1</td><td>83.3</td><td>76.7</td></tr>
+                                    <tr><th scope="row">2025-07-28</th><td>86.2</td><td>80.9</td><td>87.3</td><td>81.8</td></tr>
+                                    <tr><th scope="row">2025-07-29</th><td>86.2</td><td>80.5</td><td>85.4</td><td>82.7</td></tr>
+                                    <tr><th scope="row">2025-07-30</th><td>86.2</td><td>80.5</td><td>85.4</td><td>82.7</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </section>
+
+
+            <section class="cs-section" aria-labelledby="cs-limits">
+
+                <p class="cs-number">07</p>
+
+                <div>
+
+                    <h2 id="cs-limits">Limitations</h2>
+
+                    <ul class="cs-list">
+                        <li>
+                            <strong>Short window.</strong> The main views cover
+                            only 12 dates in the second half of July 2025, so
+                            they show short-term movement, not long-term trends.
+                        </li>
+                        <li>
+                            <strong>Descriptive only.</strong> The dashboard
+                            shows what prices did, not why. It doesn't include
+                            supply, demand or news data.
+                        </li>
+                    </ul>
+
+                    <div class="draft draft-block">
+                        DRAFT, FIX IN THE DASHBOARD BEFORE PUBLISHING
+                        (then delete this box):
+                        <ul class="cs-list">
+                            <li>
+                                The "Average July (15–30)" column (e.g. Brent
+                                89.75) doesn't match the KPI cards or the daily
+                                table (Brent ≈ 77.8).
+                            </li>
+                            <li>
+                                The "Difference" values are negative but have
+                                up arrows. The sign looks reversed (first half
+                                minus second half).
+                            </li>
+                            <li>
+                                The Es Sider area chart levels off near $84,
+                                but the daily table peaks at $82.7.
+                            </li>
+                            <li>
+                                All four benchmarks show the same values on 29
+                                and 30 July. Were they carried forward?
+                            </li>
+                            <li>
+                                There are no Friday or Saturday dates. If this
+                                follows a Libyan working week, say so here.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- ========================================
+             NEXT
+        ======================================== -->
+
+        <section class="work-cta" aria-labelledby="cta-title">
+
+            <div class="container work-cta-content">
+
+                <div>
+
+                    <p class="work-cta-label">
+                        OPEN TO DATA ANALYST &amp; BI ROLES IN CANADA
+                    </p>
+
+                    <h2 id="cta-title">
+                        Let's talk
+                        <span>about your data.</span>
+                    </h2>
+
+                    <p class="work-cta-text">
+                        I'm a Canadian citizen and don't need sponsorship.
+                        I'm looking for Data Analyst and Business Intelligence
+                        roles that use SQL, Power BI and Excel.
+                    </p>
+
+                </div>
+
+
+                <div class="work-cta-action">
+
+                    <a
+                        href="mailto:benhassanabdulrhman@gmail.com"
+                        class="work-contact-button"
+                    >
+                        Email me
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                        href="work.html"
+                        class="work-contact-button work-contact-secondary"
+                    >
+                        All work
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="work-footer">
+
+        <div class="container work-footer-content">
+
+            <div>
+
+                <a href="index.html" class="footer-logo" aria-label="Abdulrhman BenHassan, home">
+                    AB<span>.</span>
+                </a>
+
+                <p>
+                    Data Analyst | SQL, Power BI &amp; Excel
+                </p>
+
+            </div>
+
+
+            <div class="work-footer-right">
+
+                <a
+                    href="https://www.linkedin.com/in/abdulrhman-benhassn-a7552919a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn ↗
+                    <span class="sr-only">opens in a new tab</span>
+                </a>
+
+                <a href="index.html">
+                    Back to portfolio ↑
+                </a>
+
+                <p>
+                    © 2026 Abdulrhman BenHassan
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
